@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
-public class Student {
+public class Student implements Comparable<Student> {
 
     private int age;
     private final String name;
@@ -54,5 +54,10 @@ public class Student {
 
     public String getCourse() {
         return course;
+    }
+
+    @Override
+    public int compareTo(Student otherStudent) {
+        return this.name.compareTo(otherStudent.getName());
     }
 }

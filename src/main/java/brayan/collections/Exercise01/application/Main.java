@@ -8,6 +8,11 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         //final List<StudentManager> students = new ArrayList<>();
+        String name;
+        int age;
+        long credential;
+        String course;
+
 
         Scanner scanner = new Scanner(System.in);
         int option;
@@ -26,47 +31,91 @@ public class Main {
             System.out.println("----------------");
             System.out.print("Choose: ");
 
-            // validação de entrada (evita crash se digitar letras)
             if (scanner.hasNextInt()) {
                 option = scanner.nextInt();
                 scanner.nextLine();
 
                 switch (option) {
                     case 1:
+                        System.out.println();
+                        System.out.println("=== ADD STUDENT ===");
                         System.out.print("Name: ");
-                        String name = scanner.nextLine();
+                         name = scanner.nextLine();
                         System.out.print("Age: ");
-                        int age = scanner.nextInt();
+                         age = scanner.nextInt();
                         if (age < 17) {
                             System.out.println("Invalid age");
                             return;
                         }
                         System.out.print("Credential: ");
-                        Long credential = scanner.nextLong();
+                         credential = scanner.nextLong();
                         scanner.nextLine();
                         System.out.print("Course: ");
-                        String course = scanner.nextLine();
+                         course = scanner.nextLine();
 
                         Student student = new Student(age, name, credential, course);
                         StudentManager.addStudent(student);
                         break;
 
                     case 2:
+                        System.out.println();
+                        System.out.println("=== REMOVE STUDENT ===");
+                        System.out.print("Name: ");
+                         name = scanner.nextLine();
+                        System.out.print("Age: ");
+                         age = scanner.nextInt();
+                        if (age < 17) {
+                            System.out.println("Invalid age");
+                            return;
+                        }
+                        System.out.print("Credential: ");
+                         credential = scanner.nextLong();
+                        scanner.nextLine();
+                        System.out.print("Course: ");
+                         course = scanner.nextLine();
 
+                        Student studentRemove = new Student(age, name, credential, course);
+                        StudentManager.removeStudent(studentRemove);
                         break;
 
-                    case 3:
 
+                    case 3:
+                        System.out.println();
+                        System.out.println("=== SEARCH STUDENT ===");
+                        System.out.print("Name: ");
+                        name = scanner.nextLine();
+                        System.out.print("Age: ");
+                        age = scanner.nextInt();
+                        if (age < 17) {
+                            System.out.println("Invalid age");
+                            return;
+                        }
+                        System.out.print("Credential: ");
+                        credential = scanner.nextLong();
+                        scanner.nextLine();
+                        System.out.print("Course: ");
+                        course = scanner.nextLine();
+
+                        Student searchStudent = new Student(age, name, credential, course);
+                        StudentManager.searchStudent(searchStudent);
                         break;
 
                     case 4:
+                        System.out.println();
+                        System.out.println("=== SHOW STUDENTS ===");
                         StudentManager.showStudents();
                         break;
 
                     case 5:
+                        System.out.println();
+                        System.out.println("=== ORDER STUDENTS ===");
+                        StudentManager.orderStudents();
                         break;
 
                     case 6:
+                        System.out.println();
+                        System.out.println("=== TOTAL STUDENTS ===");
+                        StudentManager.totalStudents();
                         break;
 
                     case 0:
