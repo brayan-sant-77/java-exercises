@@ -1,7 +1,7 @@
-package brayan.collections.Exercise01.application;
+package brayan.collections.list.Exercise01.application;
 
-import brayan.collections.Exercise01.domain.Student;
-import brayan.collections.Exercise01.domain.StudentManager;
+import brayan.collections.list.Exercise01.domain.Student;
+import brayan.collections.list.Exercise01.domain.StudentManager;
 
 import java.util.Scanner;
 

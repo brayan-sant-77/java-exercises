@@ -1,7 +1,5 @@
-package brayan.collections.Exercise01.domain;
+package brayan.collections.list.Exercise01.domain;
 
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Objects;
 
 public class Student implements Comparable<Student> {

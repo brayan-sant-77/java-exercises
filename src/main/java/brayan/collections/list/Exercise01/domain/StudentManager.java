@@ -1,4 +1,4 @@
-package brayan.collections.Exercise01.domain;
+package brayan.collections.list.Exercise01.domain;
 
 import java.util.ArrayList;
 import java.util.Collections;

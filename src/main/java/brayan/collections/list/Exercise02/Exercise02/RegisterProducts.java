@@ -1,4 +1,4 @@
-package brayan.collections.Exercise02;
+package brayan.collections.list.Exercise02.Exercise02;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -1,4 +1,4 @@
-package brayan.collections.BinarySearch;
+package brayan.collections.list.BinarySearch.Exercises;
 
 import java.util.ArrayList;
 import java.util.Collections;
