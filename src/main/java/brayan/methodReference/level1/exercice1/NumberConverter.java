@@ -1,4 +1,4 @@
-package brayan.methodReference.level1;
+package brayan.methodReference.level1.exercice1;
 
 import java.util.ArrayList;
 import java.util.List;
